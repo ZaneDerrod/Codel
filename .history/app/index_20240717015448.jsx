@@ -1,13 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Linking, TouchableOpacity, Image, ScrollView, View, StyleSheet, Text } from 'react-native';
+import { Image, ScrollView, View, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../components/CustomButton';
 
 const logoIcon = require('../assets/icons/logo.png');
-
-const handleLogin = () => {
-  Linking.openURL("https://github.com/ZaneDerrod/Codel")
-}
 
 export default function HomeScreen() {
   return (
@@ -25,10 +21,6 @@ export default function HomeScreen() {
               <Text style={styles.highlight}>Codel</Text>
             </Text>
             <CustomButton />
-            <Text style={styles.loginQuestion}>Already have a account? </Text>
-            <TouchableOpacity onPress={handleLogin}>
-              <Text style={styles.login}>Login</Text>
-            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -67,15 +59,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   highlight: {
-    color: '#21B6A8', // Example secondary color
+    color: '#FFD700', // Example secondary color
   },
-  loginQuestion :{
-    marginTop: 5,
-    color: 'white',
-  },
-  login:{
-    color: '#21B6A8',
-    
-  }
-  
 });

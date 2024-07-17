@@ -11,15 +11,13 @@ const CustomButton = () => {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#21B6A8', 
+    backgroundColor: '#FFD700', 
     borderRadius: 15, 
-    minHeight: 60, 
+    minHeight: 20, 
     justifyContent: 'center', 
     alignItems: 'center', 
-    paddingHorizontal: 150, 
-    paddingVertical: 8, 
-    width: '100%',
-    marginTop: 20,
+    paddingHorizontal: 175, 
+    paddingVertical: 0, 
   },
   buttonText: {
     color: '#FFFFFF',

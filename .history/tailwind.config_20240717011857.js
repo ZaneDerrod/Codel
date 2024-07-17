@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
-  newTheme: {
+  theme: {
     extend: {
       colors: {
-        primary: "#231F20",
+        primary: "#161622",
         'custom-teal': '#21B6A8',
         secondary: {
           DEFAULT: "#FF9C01",
           100: "#FF9001",
           200: "#21B6A8",
         },
-        black: {  
+        black: {
           DEFAULT: "#000",
           100: "#1E1E2D",
           200: "#232533",

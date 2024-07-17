@@ -25,9 +25,8 @@ export default function HomeScreen() {
               <Text style={styles.highlight}>Codel</Text>
             </Text>
             <CustomButton />
-            <Text style={styles.loginQuestion}>Already have a account? </Text>
-            <TouchableOpacity onPress={handleLogin}>
-              <Text style={styles.login}>Login</Text>
+            <TouchableOpacity>
+              <Text style={styles.login}>Already have a account? </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -69,13 +68,4 @@ const styles = StyleSheet.create({
   highlight: {
     color: '#21B6A8', // Example secondary color
   },
-  loginQuestion :{
-    marginTop: 5,
-    color: 'white',
-  },
-  login:{
-    color: '#21B6A8',
-    
-  }
-  
 });

@@ -73,9 +73,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
     color: 'white',
   },
-  login:{
-    color: '#21B6A8',
-    
-  }
+  login
   
 });
