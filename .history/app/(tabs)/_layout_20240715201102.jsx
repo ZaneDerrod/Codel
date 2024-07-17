@@ -18,8 +18,6 @@ const TabIcon = ({ icon, color, name, focused, size}) => {
         className="w-6 h-6"
         style={{ width: size, height: size }} 
       />
-
-
     </View>
   )
 }
@@ -29,7 +27,7 @@ const TabsLayout = () => {
     <>
         <Tabs
           screenOptions={{
-            tabBarShowLabel: true,
+            tabBarShowLabel: false,
             tabBarActiveTintColor: '#21B6A8',
             tabBarStyle: {
               backgroundColor: '#0A0A0A',
@@ -52,7 +50,7 @@ const TabsLayout = () => {
                       color={color}
                       name="Home"
                       focused={focused}
-                      size={35}
+                      size={25}
                     />
                   )
                 }}
@@ -102,9 +100,9 @@ const TabsLayout = () => {
                     <TabIcon
                       icon={profileIcon}
                       color={color}
-                      name="Profile"
+                      name="Home"
                       focused={focused}
-                      size={35}
+                      size={25}
                     />
                   )
                 }}

@@ -14,7 +14,7 @@ const StyledLink = styled(Link);
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView className="bg-primary h-full" >
+    <SafeAreaView className="#231f20 h-full" >
       <ScrollView contentContainerStyle={{ flexGrow:1}} className="flex-1">
         <View className="w-full justify-center items-center h-full px-4">
           <View className="relative mt-0 items-center">

@@ -20,7 +20,7 @@ export default function HomeScreen() {
           <View className="relative mt-0 items-center">
             <Image 
               source={logoIcon}
-              className="w-[300px] h-[100px] mt-0 mb-0 " 
+              className="w-[2400px] h-[1000px] mt-0 mb-0 " 
               resizeMode="contain"
                           
             />

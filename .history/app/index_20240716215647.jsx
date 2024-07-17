@@ -24,7 +24,7 @@ export default function HomeScreen() {
               resizeMode="contain"
                           
             />
-            <Text className="text-3xl text-white font-bold text-center">
+            <Text className="text-3xl custom-teal font-bold text-center">
               Show off your skills with daily coding problems
             </Text>
 

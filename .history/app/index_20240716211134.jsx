@@ -15,14 +15,14 @@ const StyledLink = styled(Link);
 export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-primary h-full" >
-      <ScrollView contentContainerStyle={{ flexGrow:1}} className="flex-1">
+      <ScrollView contentContainerStyle={{ flexGrow:1}} >
         <View className="w-full justify-center items-center h-full px-4">
-          <View className="relative mt-0 items-center">
+          <View className="relative mt-5 items-center">
             <Image 
               source={logoIcon}
-              className="w-[300px] h-[100px] mt-0 mb-0 " 
+              className="w-[2400px] h-[1598px] mb-0" 
               resizeMode="contain"
-                          
+            
             />
             <Text className="text-3xl text-white font-bold text-center">
               Show off your skills with daily coding problems

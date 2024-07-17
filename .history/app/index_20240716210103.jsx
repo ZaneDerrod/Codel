@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { Link } from 'expo-router';
 import { styled } from 'nativewind';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -15,14 +15,13 @@ const StyledLink = styled(Link);
 export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-primary h-full" >
-      <ScrollView contentContainerStyle={{ flexGrow:1}} className="flex-1">
+      <ScrollView contentContainerStyle={{ height:'100%'}}>
         <View className="w-full justify-center items-center h-full px-4">
-          <View className="relative mt-0 items-center">
+          <View className="relative mt-5">
             <Image 
               source={logoIcon}
-              className="w-[300px] h-[100px] mt-0 mb-0 " 
+              className="w-[130px] h-[84px]" 
               resizeMode="contain"
-                          
             />
             <Text className="text-3xl text-white font-bold text-center">
               Show off your skills with daily coding problems
