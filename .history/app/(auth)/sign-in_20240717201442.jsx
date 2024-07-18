@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#FFFFFF',
-    fontFamily: "Poppins-Medium",
-    fontSize: '24',
+    fontFamily: 'Gill Sans, sans-serif',
+    fontSize: "24",
   }
 });
 export default SignIn

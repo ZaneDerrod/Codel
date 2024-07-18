@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 2,
     alignContent: 'left'
-    
   },
   text: {
     color: 'white',
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100',
     borderWidth: 2,
-    boarderRadius: 15,
+    boarderRadius: 8,
     borderColor: "#FFFFFF",
     backgroundColor: '#f3f4f6',
     paddingRight: 345,

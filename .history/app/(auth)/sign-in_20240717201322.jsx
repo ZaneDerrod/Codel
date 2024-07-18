@@ -58,12 +58,11 @@ const styles = StyleSheet.create({
     alignItems: 'left'
   },  
   formField: {
-    marginTop: 7,
+    marginTop: 7
   },
   text: {
     color: '#FFFFFF',
-    fontFamily: "Poppins-Medium",
-    fontSize: '24',
+    fontFamily: 'Gill Sans, sans-serif'
   }
 });
 export default SignIn

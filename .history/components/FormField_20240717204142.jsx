@@ -15,8 +15,8 @@ const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ..
 const styles = StyleSheet.create({
   container: {
     marginTop: 2,
-    alignContent: 'left'
-    
+    alignContent: 'left',
+    backgroundColor: '#0000FF'
   },
   text: {
     color: 'white',

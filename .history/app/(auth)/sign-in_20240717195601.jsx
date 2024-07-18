@@ -1,5 +1,5 @@
 import { ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
-import React, {useState} from 'react'
+import React from 'react'
 import FormField from '../../components/FormField';
 
 const SignIn = () => {
@@ -13,7 +13,7 @@ const SignIn = () => {
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.innerContainer}>
           <View style={styles.content}>
-            <Text style={styles.text}>Log In to Codel</Text>
+            <Text>Log In to Codel</Text>
 
             <FormField
               title="Email"
@@ -22,16 +22,6 @@ const SignIn = () => {
                 email: e
               })}
               style={styles.formField}
-              keyboardType="email-address"
-            />
-            <FormField
-              title="Password"
-              value={form.password}
-              handleChangeText={(e) => setForm({ ...form,
-                password: e
-              })}
-              style={styles.formField}
-              keyboardType="password-address"
             />
           </View>
         </View>
@@ -49,21 +39,16 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     width: '100%',
-    alignItems: 'left',
+    alignItems: 'center',
     height: '100%',
     paddingHorizontal: 16,
   },
   content: {
     marginTop: 0,
-    alignItems: 'left'
+    alignItems: 'center'
   },  
   formField: {
-    marginTop: 7,
-  },
-  text: {
-    color: '#FFFFFF',
-    fontFamily: "Poppins-Medium",
-    fontSize: '24',
+    marginTop: 7
   }
 });
 export default SignIn

@@ -13,7 +13,7 @@ const SignIn = () => {
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.innerContainer}>
           <View style={styles.content}>
-            <Text style={styles.text}>Log In to Codel</Text>
+            <Text>Log In to Codel</Text>
 
             <FormField
               title="Email"
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     width: '100%',
-    alignItems: 'left',
+    alignItems: 'center',
     height: '100%',
     paddingHorizontal: 16,
   },
@@ -58,12 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'left'
   },  
   formField: {
-    marginTop: 7,
-  },
-  text: {
-    color: '#FFFFFF',
-    fontFamily: "Poppins-Medium",
-    fontSize: '24',
+    marginTop: 7
   }
 });
 export default SignIn

@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#FFFFFF',
-    fontFamily: "Poppins-Medium",
+    
     fontSize: '24',
   }
 });

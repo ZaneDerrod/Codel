@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   container: {
     marginTop: 2,
     alignContent: 'left'
-    
+    backgroundColor: '#0000FF'
   },
   text: {
     color: 'white',
