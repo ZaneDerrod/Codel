@@ -5,6 +5,9 @@ const FormField = ({title, value, placeholder, handleChangeText, otherStyles, ..
   return (
     <View style={styles.otherStyles}>
       <Text style={styles.text}>{title}</Text>
+      <View className="w-full h-10 px-4 bg-black-100 border-2">
+
+      </View>
       <View style={styles.input}>
 
       </View>
@@ -25,9 +28,9 @@ const styles = StyleSheet.create({
     padding: 16,
     width: '100%',
     height: '100',
-    borderWidth: '2px',
-    borderRadius: '10px',
-    borderColor: "#000000",
+    borderWidth: 2,
+    boarderRadius: 15,
+    borderColor: "#FFFFFF",
     color: '#f3f4f6',
     paddingRight: 345,
     paddingTop: 30,
