@@ -1,15 +1,10 @@
-import { ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
+
 const SignUp = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollViewContent}>
-        <View style={styles.innerContainer}>
-          <View style={styles.content}>
-            <Text>Sign Up</Text>
-          </View>
-        </View>
-      </ScrollView>
+      
     </SafeAreaView>
   )
 }

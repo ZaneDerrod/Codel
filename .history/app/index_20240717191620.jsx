@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Linking, TouchableOpacity, Image, ScrollView, View, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomButton from '../components/CustomButton';
-import { Redirect, router } from 'expo-router';
+import { Redirect, router } from 'expo-router'
 
 const logoIcon = require('../assets/icons/logo.png');
 
@@ -28,7 +28,7 @@ export default function HomeScreen() {
               Show off your skills with daily coding problems using{' '}
               <Text style={styles.highlight}>Codel</Text>
             </Text>
-            <CustomButton title="Sign Up" onPress={() => router.push('/sign-up')}/>
+            <CustomButton title="Sign Up" onPress={handleSignIn}/>
             <CustomButton 
             title="Sign In with Google" 
             onPress={handleSignIn} 
@@ -37,7 +37,7 @@ export default function HomeScreen() {
             />
             
             <Text style={styles.loginQuestion}>Already have a account? </Text>
-            <TouchableOpacity onPress={() => router.push('/sign-in')}>
+            <TouchableOpacity onPress={handleLogin}>
               <Text style={styles.login}>Login</Text>
             </TouchableOpacity>
           </View>

@@ -1,15 +1,11 @@
-import { ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
-const SignUp = () => {
+import { SafeAreaView } from 'react-native-safe-area-context'
+
+const SignIn = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollViewContent}>
-        <View style={styles.innerContainer}>
-          <View style={styles.content}>
-            <Text>Sign Up</Text>
-          </View>
-        </View>
-      </ScrollView>
+      
     </SafeAreaView>
   )
 }
@@ -29,9 +25,7 @@ const styles = StyleSheet.create({
   },
   content: {
     marginTop: 0,
-    alignItems: 'center'
-  }  
+    alignItems: 'center',
 });
 
-
-export default SignUp
+export default SignIn

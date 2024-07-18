@@ -37,7 +37,7 @@ export default function HomeScreen() {
             />
             
             <Text style={styles.loginQuestion}>Already have a account? </Text>
-            <TouchableOpacity onPress={() => router.push('/sign-in')}>
+            <TouchableOpacity onPress={handleLogin}>
               <Text style={styles.login}>Login</Text>
             </TouchableOpacity>
           </View>

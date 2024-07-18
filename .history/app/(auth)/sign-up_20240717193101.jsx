@@ -6,7 +6,7 @@ const SignUp = () => {
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.innerContainer}>
           <View style={styles.content}>
-            <Text>Sign Up</Text>
+
           </View>
         </View>
       </ScrollView>

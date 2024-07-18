@@ -1,6 +1,7 @@
 import { ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-const SignUp = () => {
+
+const SignIn = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
@@ -32,6 +33,4 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }  
 });
-
-
-export default SignUp
+export default SignIn

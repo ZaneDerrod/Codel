@@ -1,14 +1,11 @@
-import { ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
+import { SafeAreaView, View, Text, StyleSheet } from 'react-native'
 import React from 'react'
+import { ScrollView } from 'react-native-gesture-handler'
 const SignUp = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollViewContent}>
-        <View style={styles.innerContainer}>
-          <View style={styles.content}>
-            <Text>Sign Up</Text>
-          </View>
-        </View>
+      <ScrollView>
+        
       </ScrollView>
     </SafeAreaView>
   )
