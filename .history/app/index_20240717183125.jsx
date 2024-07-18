@@ -27,7 +27,7 @@ export default function HomeScreen() {
               Show off your skills with daily coding problems using{' '}
               <Text style={styles.highlight}>Codel</Text>
             </Text>
-            <CustomButton title="Sign Up" onPress={handleSignIn}/>
+            <CustomButton title="Sign In" onPress={handleSignIn}/>
             <CustomButton 
             title="Sign In with Google" 
             onPress={handleSignIn} 
@@ -88,13 +88,13 @@ const styles = StyleSheet.create({
     
   },
   customButtonStyle: {
-    marginTop: 7,
-    backgroundColor: 'rgba(255, 0, 0, 0.1)', 
-    paddingHorizontal: 112,     
+    backgroundColor: '#FF5733', 
+    paddingHorizontal: 90,     
     borderRadius: 20,          
+    color: 'FF0000'
   },
   customButtonTextStyle: {
-    color: '#FF0000', 
+    color: '#FF0000', // New text color
   },
   
 });

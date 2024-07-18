@@ -88,9 +88,9 @@ const styles = StyleSheet.create({
     
   },
   customButtonStyle: {
-    marginTop: 7,
+    marginTop: 0,
     backgroundColor: 'rgba(255, 0, 0, 0.1)', 
-    paddingHorizontal: 112,     
+    paddingHorizontal: 105,     
     borderRadius: 20,          
   },
   customButtonTextStyle: {

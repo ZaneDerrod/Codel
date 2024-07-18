@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   customButtonStyle: {
     marginTop: 7,
     backgroundColor: 'rgba(255, 0, 0, 0.1)', 
-    paddingHorizontal: 112,     
+    paddingHorizontal: 114,     
     borderRadius: 20,          
   },
   customButtonTextStyle: {

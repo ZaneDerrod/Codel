@@ -27,14 +27,7 @@ export default function HomeScreen() {
               Show off your skills with daily coding problems using{' '}
               <Text style={styles.highlight}>Codel</Text>
             </Text>
-            <CustomButton title="Sign Up" onPress={handleSignIn}/>
-            <CustomButton 
-            title="Sign In with Google" 
-            onPress={handleSignIn} 
-            style={styles.customButtonStyle}
-            textStyle={styles.customButtonTextStyle}  
-            />
-            
+            <CustomButton title="Sign In" onPress={handleSignIn}/>
             <Text style={styles.loginQuestion}>Already have a account? </Text>
             <TouchableOpacity onPress={handleLogin}>
               <Text style={styles.login}>Login</Text>
@@ -86,15 +79,6 @@ const styles = StyleSheet.create({
   login:{
     color: '#21B6A8',
     
-  },
-  customButtonStyle: {
-    marginTop: 7,
-    backgroundColor: 'rgba(255, 0, 0, 0.1)', 
-    paddingHorizontal: 112,     
-    borderRadius: 20,          
-  },
-  customButtonTextStyle: {
-    color: '#FF0000', 
-  },
+  }
   
 });
