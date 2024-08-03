@@ -1,8 +1,6 @@
 import { Image, ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
-import { Redirect, router } from 'expo-router';
 import FormField from '../../components/FormField';
-import CustomButton from '../../components/CustomButton';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
@@ -42,8 +40,6 @@ const SignIn = () => {
               style={styles.formField}
               keyboardType="password-address"
             />
-
-            <CustomButton title="Log In" onPress={() => router.push('/home')}/>
           </View>
         </View>
       </ScrollView>
@@ -55,27 +51,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#231F20', // Custom primary color
     flex: 1,
   },
-  scrollViewContent: {
-    flexGrow: 1,
-  },
   logo: {
     width: 500,
     height: 400,
     marginTop: 0,
     marginBottom: 0,
+    alignItems: 'center',
   },
   scrollViewContent: {
     flexGrow: 1,
   },
   innerContainer: {
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'left',
     height: '100%',
     paddingHorizontal: 16,
   },
   content: {
     marginTop: 0,
-    alignItems: 'center',
+    alignItems: 'left'
   },  
   formField: {
     marginTop: 7,

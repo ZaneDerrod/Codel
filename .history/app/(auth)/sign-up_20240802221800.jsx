@@ -6,7 +6,7 @@ import CustomButton from '../../components/CustomButton';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
-const SignIn = () => {
+const SignUp = () => {
 
   const [form, setForm] = useState({
     email: '',
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
     fontSize: '24',
   }
 });
-export default SignIn
+export default SignUp

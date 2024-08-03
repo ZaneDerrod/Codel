@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-codel-dev-5a6dc-authRole",
+      "UnauthRoleArn": "arn:aws:iam::851725221874:role/amplify-codel-dev-5a6dc-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::851725221874:role/amplify-codel-dev-5a6dc-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-codel-dev-5a6dc-deployment",
+      "UnauthRoleName": "amplify-codel-dev-5a6dc-unauthRole",
+      "StackName": "amplify-codel-dev-5a6dc",
+      "StackId": "arn:aws:cloudformation:us-west-1:851725221874:stack/amplify-codel-dev-5a6dc/9e4cfa90-5160-11ef-b789-06401d13c52f",
+      "AmplifyAppId": "d26ft6i92lfav9"
+    }
+  }
+}

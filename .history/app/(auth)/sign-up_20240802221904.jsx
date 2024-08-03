@@ -6,7 +6,7 @@ import CustomButton from '../../components/CustomButton';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
-const SignIn = () => {
+const SignUp = () => {
 
   const [form, setForm] = useState({
     email: '',
@@ -22,7 +22,7 @@ const SignIn = () => {
               style={styles.logo}
               resizeMode="contain"
             />
-            <Text style={styles.text}>Log In to Codel</Text>
+            <Text style={styles.text}>Create an Account</Text>
 
             <FormField
               title="Email"
@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   logo: {
-    width: 500,
-    height: 400,
+    width: 400,
+    height: 300,
     marginTop: 0,
     marginBottom: 0,
   },
@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
     fontSize: '24',
   }
 });
-export default SignIn
+export default SignUp

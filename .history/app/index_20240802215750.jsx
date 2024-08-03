@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     color: '#21B6A8', // Example secondary color
   },
   loginQuestion :{
-    marginTop: 20,
+    marginTop: 5,
     color: 'white',
   },
   login:{
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     
   },
   customButtonStyle: {
-    marginTop: 20,
+    marginTop: 10,
     backgroundColor: 'rgba(255, 0, 0, 0.1)', 
     paddingHorizontal: 112,     
     borderRadius: 20,          

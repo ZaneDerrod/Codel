@@ -1,6 +1,5 @@
 import { Image, ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
-import { Redirect, router } from 'expo-router';
 import FormField from '../../components/FormField';
 import CustomButton from '../../components/CustomButton';
 
@@ -43,7 +42,7 @@ const SignIn = () => {
               keyboardType="password-address"
             />
 
-            <CustomButton title="Log In" onPress={() => router.push('/home')}/>
+            <CustomButton title="Log In" onPress={() => router.push('../home')}/>
           </View>
         </View>
       </ScrollView>
