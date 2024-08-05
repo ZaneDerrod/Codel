@@ -1,3 +1,69 @@
+import {useState } from 'react';
+import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Redirect, router } from 'expo-router';
+import CustomButton from '../../components/CustomButton';
+const logoIcon = require('../../assets/icons/logo.png');
+const SignIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const onSignInPressed = () => {
+
+  }
+  return (
+    <View style = {styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <Image
+              source={logoIcon}
+              style={styles.logo}
+              resizeMode="contain"
+      />
+      <Text style = {styles.title}>Sign In</Text>
+        <TextInput value={}placeholder="Email" style={styles.input}/>
+        <TextInput placeholder="Password" style={styles.input}/>
+        <CustomButton title="Sign In" style={styles.signInButton} onPress={() => router.push('/home')}/>
+        </ScrollView>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 15,
+    backgroundColor: '#231F20',
+    flex: 1
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+  },
+  title: {
+    fontFamily: 'InterSemi',
+    fontSize: 24,
+    color: 'white'
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: 'white',
+    padding: 20,
+    marginVertical: 10,
+    backgroundColor: '#141414',
+    borderRadius: 10,
+    width: 350
+  },
+  logo: {
+    justifyContent: 'center',
+    width: 350,
+    height: 300,
+    marginTop: 0,
+    marginBottom: 0,
+  },
+  signInButton: {
+    marginTop: 10,
+    width: 350
+  }
+})
+
+export default SignIn;
+/*
 import { Image, ScrollView, SafeAreaView, View, Text, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
 import { Redirect, router } from 'expo-router';
@@ -6,12 +72,11 @@ import CustomButton from '../../components/CustomButton';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
-const SignUp = () => {
+const SignIn = () => {
 
   const [form, setForm] = useState({
     email: '',
-    password: '',
-    phoneNumber: ''
+    password: ''
   })
   return (
     <SafeAreaView style={styles.container}>
@@ -23,7 +88,7 @@ const SignUp = () => {
               style={styles.logo}
               resizeMode="contain"
             />
-            <Text style={styles.text}>Create an Account</Text>
+            <Text style={styles.text}>Log In to Codel</Text>
 
             <FormField
               title="Email"
@@ -43,17 +108,8 @@ const SignUp = () => {
               style={styles.formField}
               keyboardType="password-address"
             />
-            <FormField
-              title="Phone Number"
-              value={form.password}
-              handleChangeText={(e) => setForm({ ...form,
-                password: e
-              })}
-              style={styles.formField}
-              keyboardType="password-address"
-            />
 
-            <CustomButton title="Sign Up" onPress={() => router.push('/home')}/>
+            <CustomButton title="Log In" onPress={() => router.push('/home')}/>
           </View>
         </View>
       </ScrollView>
@@ -63,13 +119,14 @@ const SignUp = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#231F20', // Custom primary color
+    flex: 1,
   },
   scrollViewContent: {
     flexGrow: 1,
   },
   logo: {
-    width: 400,
-    height: 300,
+    width: 500,
+    height: 400,
     marginTop: 0,
     marginBottom: 0,
   },
@@ -93,7 +150,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontFamily: "Poppins-Medium",
     fontSize: '24',
-    alignItems: 'center'
   }
 });
-export default SignUp
+export default SignIn
+*/

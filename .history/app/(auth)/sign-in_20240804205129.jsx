@@ -2,24 +2,12 @@ import {useState } from 'react';
 import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../components/CustomButton';
-import { signIn } from 'aws-amplify/auth'
-
 const logoIcon = require('../../assets/icons/logo.png');
-
 const SignIn = () => {
-  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const onSignInPressed = async () => {
-    try{
-        const { isSignedIn } = await signIn({
-          username: email,
-          password,
-        })
-    } catch (error){
-      console.log(error);
-    }
+  const onSignInPressed = () => {
+    console.warn('Sign In: ', email)
   }
   return (
     <View style = {styles.container}>
@@ -31,6 +19,7 @@ const SignIn = () => {
       />
       <Text style = {styles.title}>Sign In</Text>
         <TextInput 
+        style={{color: 'white'}}
         value={email}
         onChangeText={setEmail}
         placeholder="Email" 
@@ -39,9 +28,7 @@ const SignIn = () => {
         value={password}
         onChangeText={setPassword}
         placeholder="Password" 
-        style={styles.input}
-        secureTextEntry
-        />
+        style={styles.input}/>
         <CustomButton title="Sign In" style={styles.signInButton} 
         onPress={onSignInPressed}
         //onPress={() => router.push('/home')}
@@ -72,8 +59,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     backgroundColor: '#141414',
     borderRadius: 10,
-    width: 350,
-    color: 'white'
+    width: 350
   },
   logo: {
     justifyContent: 'center',

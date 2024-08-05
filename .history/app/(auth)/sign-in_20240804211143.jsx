@@ -2,12 +2,12 @@ import {useState } from 'react';
 import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../components/CustomButton';
-import { signIn } from 'aws-amplify/auth'
+import { SignIn } from 'aws-amplify/auth'
 
 const logoIcon = require('../../assets/icons/logo.png');
 
-const SignIn = () => {
-  
+function SignIn = () => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 

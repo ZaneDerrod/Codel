@@ -1,13 +1,26 @@
-/*
-import { withAuthenticator,useAuthenticator} from '@aws-amplify/ui-react-native';
-import {Slot} from 'expo-router';
+import { signIn } from 'aws-amplify/auth';  // <== use this directly
+import React from 'react';
+import {View,Button} from 'react-native';
 
-function ProtectedLayout(){
-  return <Slot/>
+function App() {
+  const handleSignIn = async () => {
+    try {
+      const result = await signIn({
+        username,
+        password
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  return (
+        <View style={styles.container}>
+        	<Button onPress={handleSignIn} title="SignIn" />
+        </View>
+  );
 }
-export default withAuthenticator(ProtectedLayout);
-*/
-import { View, Text } from 'react-native'
+/*
+import { View, Text } froqm 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -36,4 +49,5 @@ const AuthLayout = () => {
   )
 }
 
-export default AuthLayout;
+export default withAuthenticator(AuthLayout);
+*/

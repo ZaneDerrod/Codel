@@ -44,7 +44,7 @@ const RootLayout = () => {
     return null;
   }
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
     <Stack>
       <Stack.Screen name="index" options={{headerShown:
         false}} />

@@ -13,7 +13,7 @@ const theme = {
   tokens: {
     colors: {
       font: {
-        primary: 'black'
+        primary: 'red'
       }
     }
   }

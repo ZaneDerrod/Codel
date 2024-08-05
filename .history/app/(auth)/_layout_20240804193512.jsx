@@ -1,12 +1,24 @@
-/*
-import { withAuthenticator,useAuthenticator} from '@aws-amplify/ui-react-native';
-import {Slot} from 'expo-router';
+import { Button } from 'react-native';
+import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 
-function ProtectedLayout(){
-  return <Slot/>
+function SignOutButton() {
+  const { signOut } = useAuthenticator();
+  return <Button title="Sign Out" onPress={signOut} />;
 }
-export default withAuthenticator(ProtectedLayout);
-*/
+
+function App() {
+  return (
+    <Authenticator.Provider>
+      <Authenticator>
+        <SignOutButton />
+      </Authenticator>
+    </Authenticator.Provider>
+  );
+}
+
+export default App;
+
+/*
 import { View, Text } from 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router';
@@ -36,4 +48,5 @@ const AuthLayout = () => {
   )
 }
 
-export default AuthLayout;
+export default withAuthenticator(AuthLayout);
+*/

@@ -1,4 +1,3 @@
-/*
 import { withAuthenticator,useAuthenticator} from '@aws-amplify/ui-react-native';
 import {Slot} from 'expo-router';
 
@@ -6,8 +5,9 @@ function ProtectedLayout(){
   return <Slot/>
 }
 export default withAuthenticator(ProtectedLayout);
-*/
-import { View, Text } from 'react-native'
+
+/*
+import { View, Text } froqm 'react-native'
 import React from 'react'
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -36,4 +36,5 @@ const AuthLayout = () => {
   )
 }
 
-export default AuthLayout;
+export default withAuthenticator(AuthLayout);
+*/

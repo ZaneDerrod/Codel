@@ -7,7 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from '@aws-amplify/ui-react-native';
 
 import { Amplify } from 'aws-amplify';
-import amplifyconfig from './../src/amplifyconfiguration.json';
+import amplifyconfig from './src/amplifyconfiguration.json';
 Amplify.configure(amplifyconfig);
 const theme = {
   tokens: {
@@ -44,7 +44,7 @@ const RootLayout = () => {
     return null;
   }
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
     <Stack>
       <Stack.Screen name="index" options={{headerShown:
         false}} />
