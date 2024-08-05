@@ -23,7 +23,7 @@ const SignUp = () => {
           attributes: { phone_number },
         });
         if(isSignedUp){
-          router.push('/verification');
+          router.push('/protected/(tabs)/home');
         }
     } catch (e){
       setError(e.message);
@@ -59,6 +59,7 @@ const SignUp = () => {
         />
         <CustomButton title="Sign Up" style={styles.signUpButton} 
         onPress={onSignUpPressed}
+        //onPress={() => router.push('/home')}
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
         </ScrollView>

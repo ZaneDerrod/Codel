@@ -21,7 +21,7 @@ const SignIn = () => {
           password,
         });
         if(isSignedIn){
-          router.push('/protected/(tabs)/home');
+          router.push('protected/(tabs)/home');
         }
     } catch (e){
       setError(e.message);

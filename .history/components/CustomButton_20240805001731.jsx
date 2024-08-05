@@ -4,7 +4,7 @@ import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 const CustomButton = ({title, onPress, style, textStyle}) => {
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
-      <Text style={[styles.buttonText, textStyle]}>{title}</Text>
+      <Text adjustsFontSizeToFit={true} style={[styles.buttonText, textStyle]}>{title}</Text>
     </TouchableOpacity>
   );
 };
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     minHeight: 60, 
     justifyContent: 'center', 
     alignItems: 'center', 
-    paddingHorizontal: 100, 
+    paddingHorizontal: 150, 
     paddingVertical: 8, 
     width: '100%',
     marginTop: 20,

@@ -21,11 +21,7 @@ export default function HomeScreen() {
               Show off your skills with daily coding problems using{' '}
               <Text style={styles.highlight}>Codel</Text>
             </Text>
-            <CustomButton 
-            title="Sign Up"
-            style={styles.signUpButton} 
-            onPress={() => router.push('/sign-up')}
-            />
+            <CustomButton title="Sign Up" onPress={() => router.push('/sign-up')}/>
             <CustomButton 
             title="Sign In with Google"  
             style={styles.customButtonGoogleStyle}
@@ -84,10 +80,7 @@ const styles = StyleSheet.create({
     color: '#21B6A8',
     
   },
-  signUpButton:{
-    width: 350
-  },
-  customButtonGoogleStyle: {
+  customButtonStyle: {
     marginTop: 20,
     backgroundColor: 'rgba(255, 0, 0, 0.1)', 
     paddingHorizontal: 112,     

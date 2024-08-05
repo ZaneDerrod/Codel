@@ -5,7 +5,7 @@ import CustomButton from '../../components/CustomButton';
 import { signIn } from 'aws-amplify/auth'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-const logoIcon = require('../../assets/icons/logo.png');
+const logoIcon = require('../../../assets/icons/logo.png');
 
 const SignIn = () => {
   
@@ -21,7 +21,7 @@ const SignIn = () => {
           password,
         });
         if(isSignedIn){
-          router.push('/protected/(tabs)/home');
+          router.push('/(tabs)/home');
         }
     } catch (e){
       setError(e.message);

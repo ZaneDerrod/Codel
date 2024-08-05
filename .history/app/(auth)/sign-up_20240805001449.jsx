@@ -11,7 +11,6 @@ const SignUp = () => {
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [phone_number, setPhoneNumber] = useState('')
   const [error, setError] = useState('');
 
   const onSignUpPressed = async () => {
@@ -20,10 +19,9 @@ const SignUp = () => {
         const { isSignedUp } = await signUp({
           username: email,
           password,
-          attributes: { phone_number },
         });
         if(isSignedUp){
-          router.push('/verification');
+          router.push('/protected/(tabs)/home');
         }
     } catch (e){
       setError(e.message);
@@ -46,11 +44,6 @@ const SignUp = () => {
         placeholder="Email" 
         style={styles.input}/>
         <TextInput 
-        value={phone_number}
-        onChangeText={setPhoneNumber}
-        placeholder="Phone Number" 
-        style={styles.input}/>
-        <TextInput 
         value={password}
         onChangeText={setPassword}
         placeholder="Password" 
@@ -59,6 +52,7 @@ const SignUp = () => {
         />
         <CustomButton title="Sign Up" style={styles.signUpButton} 
         onPress={onSignUpPressed}
+        //onPress={() => router.push('/home')}
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
         </ScrollView>
@@ -99,8 +93,7 @@ const styles = StyleSheet.create({
   },
   signUpButton: {
     marginTop: 10,
-    width: 350,
-    flex: 1
+    width: 352
   }
 })
 

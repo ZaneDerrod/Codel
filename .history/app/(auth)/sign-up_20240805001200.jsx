@@ -2,28 +2,26 @@ import {useState } from 'react';
 import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../components/CustomButton';
-import { signUp } from 'aws-amplify/auth'
+import { signIn } from 'aws-amplify/auth'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
-const SignUp = () => {
+const SignIn = () => {
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [phone_number, setPhoneNumber] = useState('')
   const [error, setError] = useState('');
 
-  const onSignUpPressed = async () => {
+  const onSignInPressed = async () => {
     setError('');
     try{
-        const { isSignedUp } = await signUp({
+        const { isSignedIn } = await signIn({
           username: email,
           password,
-          attributes: { phone_number },
         });
-        if(isSignedUp){
-          router.push('/verification');
+        if(isSignedIn){
+          router.push('/protected/(tabs)/home');
         }
     } catch (e){
       setError(e.message);
@@ -39,16 +37,11 @@ const SignUp = () => {
               style={styles.logo}
               resizeMode="contain"
           />
-      <Text style = {styles.title}>Create an Account</Text>
+      <Text style = {styles.title}>Sign In</Text>
         <TextInput 
         value={email}
         onChangeText={setEmail}
         placeholder="Email" 
-        style={styles.input}/>
-        <TextInput 
-        value={phone_number}
-        onChangeText={setPhoneNumber}
-        placeholder="Phone Number" 
         style={styles.input}/>
         <TextInput 
         value={password}
@@ -57,8 +50,9 @@ const SignUp = () => {
         style={styles.input}
         secureTextEntry
         />
-        <CustomButton title="Sign Up" style={styles.signUpButton} 
-        onPress={onSignUpPressed}
+        <CustomButton title="Sign In" style={styles.signInButton} 
+        onPress={onSignInPressed}
+        //onPress={() => router.push('/home')}
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
         </ScrollView>
@@ -97,11 +91,10 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginBottom: 0,
   },
-  signUpButton: {
+  signInButton: {
     marginTop: 10,
-    width: 350,
-    flex: 1
+    width: 350
   }
 })
 
-export default SignUp;
+export default SignIn;

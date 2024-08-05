@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import { useState, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from '@aws-amplify/ui-react-native';
+import { getCurrentUser, AuthUser } from 'aws-amplify/auth';
 
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './../src/amplifyconfiguration.json';
@@ -43,6 +44,15 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) {
     return null;
   }
+  const [user, setUser] = useState<AuthUser | null>(null);
+  const fetchUser = async () => {
+    const res = await getCurrentUser();
+    setUser(res);
+  }
+  useEffect(() => {
+    fetchUser();
+  }, []);
+  console.log(user);
   return (
     <ThemeProvider theme={theme}>
       <Stack>

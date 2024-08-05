@@ -21,22 +21,21 @@ const SignIn = () => {
           password,
         });
         if(isSignedIn){
-          router.push('/protected/(tabs)/home');
+          router.push('/(tabs)/home');
         }
     } catch (e){
       setError(e.message);
     }
   }
   return (
-    <KeyboardAwareScrollView
-      style = {styles.container}
-    >
-        <ScrollView contentContainerStyle={styles.scrollViewContent}>
-          <Image
+    <KeyboardAwareScrollView>
+    <View style = {styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <Image
               source={logoIcon}
               style={styles.logo}
               resizeMode="contain"
-          />
+      />
       <Text style = {styles.title}>Sign In</Text>
         <TextInput 
         value={email}
@@ -56,6 +55,7 @@ const SignIn = () => {
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
         </ScrollView>
+    </View>
     </KeyboardAwareScrollView>
   )
 }

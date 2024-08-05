@@ -1,9 +1,8 @@
 import {useState } from 'react';
-import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Platform, KeyboardAvoidingView, Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../components/CustomButton';
 import { signIn } from 'aws-amplify/auth'
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const logoIcon = require('../../assets/icons/logo.png');
 
@@ -21,42 +20,45 @@ const SignIn = () => {
           password,
         });
         if(isSignedIn){
-          router.push('/protected/(tabs)/home');
+          router.push('/(tabs)/home');
         }
     } catch (e){
       setError(e.message);
     }
   }
   return (
-    <KeyboardAwareScrollView
-      style = {styles.container}
+    <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style = {styles.container}
     >
+      <View>
         <ScrollView contentContainerStyle={styles.scrollViewContent}>
           <Image
               source={logoIcon}
               style={styles.logo}
               resizeMode="contain"
           />
-      <Text style = {styles.title}>Sign In</Text>
-        <TextInput 
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Email" 
-        style={styles.input}/>
-        <TextInput 
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Password" 
-        style={styles.input}
-        secureTextEntry
-        />
-        <CustomButton title="Sign In" style={styles.signInButton} 
-        onPress={onSignInPressed}
-        //onPress={() => router.push('/home')}
-        />
-        {error && <Text style={{color: 'red'}}>{error}</Text>}
+          <Text style = {styles.title}>Sign In</Text>
+          <TextInput 
+            value={email}
+            onChangeText={setEmail}
+            placeholder="Email" 
+            style={styles.input}/>
+          <TextInput 
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Password" 
+            style={styles.input}
+            secureTextEntry
+          />
+          <CustomButton title="Sign In" style={styles.signInButton} 
+          onPress={onSignInPressed}
+          //onPress={() => router.push('/home')}
+          />
+          {error && <Text style={{color: 'red'}}>{error}</Text>}
         </ScrollView>
-    </KeyboardAwareScrollView>
+      </View>
+    </KeyboardAvoidingView>
   )
 }
 

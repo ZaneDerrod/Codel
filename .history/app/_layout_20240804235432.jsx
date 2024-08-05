@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import { useState, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 import { ThemeProvider } from '@aws-amplify/ui-react-native';
+import { getCurrentUser, AuthUser } from 'aws-amplify/auth';
 
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './../src/amplifyconfiguration.json';
@@ -51,6 +52,6 @@ const RootLayout = () => {
       </Stack>
     </ThemeProvider>
   )
-} 
+}
 
-export default RootLayout;
+export default RootLayout
