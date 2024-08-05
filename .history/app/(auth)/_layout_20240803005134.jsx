@@ -4,7 +4,7 @@ import {Slot} from 'expo-router';
 function ProtectedLayout(){
   return <Slot/>
 }
-export default withAuthenticator(ProtectedLayout);
+export default withAuthenticator(AuthLayout);
 
 /*
 import { View, Text } from 'react-native'
