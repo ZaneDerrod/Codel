@@ -44,7 +44,7 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) {
     return null;
   }
-  /*
+
   const [user, setUser] = useState<AuthUser>('');
   const fetchUser = async () => {
     const res = await getCurrentUser();
@@ -54,13 +54,13 @@ const RootLayout = () => {
     fetchUser();
   }, []);
   console.log(user);
-  */
   return (
     <ThemeProvider theme={theme}>
       <Stack>
         <Stack.Screen name="index" 
         options={{headerShown:false}} 
         />
+        <Slot/>
       </Stack>
     </ThemeProvider>
   )

@@ -44,8 +44,8 @@ const RootLayout = () => {
   if (!fontsLoaded && !error) {
     return null;
   }
-  /*
-  const [user, setUser] = useState<AuthUser>('');
+
+  const [user, setUser] = useState<import('aws-amplify/auth').AuthUser>('');
   const fetchUser = async () => {
     const res = await getCurrentUser();
     setUser(res);
@@ -54,13 +54,13 @@ const RootLayout = () => {
     fetchUser();
   }, []);
   console.log(user);
-  */
   return (
     <ThemeProvider theme={theme}>
       <Stack>
         <Stack.Screen name="index" 
         options={{headerShown:false}} 
         />
+        <Slot/>
       </Stack>
     </ThemeProvider>
   )
