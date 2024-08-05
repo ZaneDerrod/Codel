@@ -46,7 +46,7 @@ const RootLayout = () => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Slot/>
+      
     </ThemeProvider>
   )
 } 
