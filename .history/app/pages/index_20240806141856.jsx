@@ -26,7 +26,7 @@ export default function HomeScreen() {
             <CustomButton 
             title="Continue With Email"
             style={styles.signUpButton} 
-            onPress={() => router.push('/pages/protected')}
+            onPress={() => router.push('/pages/(auth)/sign-up')}
             />
             <CustomButton 
             title="Sign In with Google"  

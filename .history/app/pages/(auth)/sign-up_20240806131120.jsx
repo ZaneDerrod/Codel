@@ -2,11 +2,13 @@ import {useState } from 'react';
 import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../../components/CustomButton';
-import { signUp } from 'aws-amplify/auth'
+import { signUp, sendUserAttributeVerificationCode } from 'aws-amplify/auth'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const logoIcon = require('../../../assets/icons/logo.png');
-
+const test = () => {
+  router.push('/(auth)//verification');
+}
 const SignUp = () => {
   
   const [email, setEmail] = useState('');
@@ -16,19 +18,20 @@ const SignUp = () => {
 
   const onSignUpPressed = async () => {
     setError('');
-    try{
-        const { isSignedUp } = await signUp({
-          username: email,
-          password,
-          attributes: { phone_number },
-        });
-        if(isSignedUp){
-          router.push('/verification');
-        }
-    } catch (e){
+    try {
+      const response = await signUp({
+        username: email,
+        password,
+        attributes: { phone_number },
+      });
+  
+      if (response) {
+        router.push('/(auth)//verification'); // Make sure this path is correct
+      }
+    } catch (e) {
       setError(e.message);
     }
-  }
+  };
   return (
     <KeyboardAwareScrollView
       style = {styles.container}
@@ -61,6 +64,9 @@ const SignUp = () => {
         onPress={onSignUpPressed}
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
+        <CustomButton title="test" style={styles.signUpButton} 
+        onPress={test}
+        />
         </ScrollView>
     </KeyboardAwareScrollView>
   )

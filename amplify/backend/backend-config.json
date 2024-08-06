@@ -1,6 +1,6 @@
 {
   "auth": {
-    "codel32a09e79": {
+    "codelb91b7896": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -13,11 +13,13 @@
           "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "PHONE_NUMBER"
         ],
         "socialProviders": [],
         "usernameAttributes": [
-          "EMAIL"
+          "EMAIL",
+          "PHONE_NUMBER"
         ],
         "verificationMechanisms": [
           "EMAIL"

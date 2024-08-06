@@ -2,7 +2,7 @@ import { getCurrentUser, AuthUser } from 'aws-amplify/auth';
 import { useEffect, useState } from 'react';
 import { Stack } from 'expo-router';
 import { Amplify } from 'aws-amplify';
-import amplifyconfig from '../../src/amplifyconfiguration.json';
+import amplifyconfig from './../src/amplifyconfiguration.json';
 Amplify.configure(amplifyconfig);
 
 export default function PagesLayout(){

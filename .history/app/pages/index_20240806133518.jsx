@@ -24,9 +24,9 @@ export default function HomeScreen() {
               <Text style={styles.highlight}>Codel</Text>
             </Text>
             <CustomButton 
-            title="Continue With Email"
+            title="Sign Up"
             style={styles.signUpButton} 
-            onPress={() => router.push('/pages/protected')}
+            onPress={() => router.push('/pages/(auth)/sign-up')}
             />
             <CustomButton 
             title="Sign In with Google"  
@@ -34,6 +34,11 @@ export default function HomeScreen() {
             textStyle={styles.customButtonTextStyle}  
             onPress={() => signInWithRedirect({ provider: "Google" })}
             />
+            
+            <Text style={styles.loginQuestion}>Already have a account? </Text>
+            <TouchableOpacity onPress={() => router.push('/pages/(auth)/sign-in')}>
+              <Text style={styles.login}>Login</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

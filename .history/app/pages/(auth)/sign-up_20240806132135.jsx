@@ -2,31 +2,36 @@ import {useState } from 'react';
 import { Image,ScrollView, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Redirect, router } from 'expo-router';
 import CustomButton from '../../../components/CustomButton';
-import { signIn } from 'aws-amplify/auth'
+import { signUp, sendUserAttributeVerificationCode } from 'aws-amplify/auth'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 const logoIcon = require('../../../assets/icons/logo.png');
-
-const SignIn = () => {
+const test = () => {
+  <Redirect href="/(auth)/verification"/>;
+}
+const SignUp = () => {
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [phone_number, setPhoneNumber] = useState('')
   const [error, setError] = useState('');
 
-  const onSignInPressed = async () => {
+  const onSignUpPressed = async () => {
     setError('');
-    try{
-        const { isSignedIn } = await signIn({
-          username: email,
-          password,
-        });
-        if(isSignedIn){
-          router.push('/protected/(tabs)/home');
-        }
-    } catch (e){
+    try {
+      const response = await signUp({
+        username: email,
+        password,
+        attributes: { phone_number },
+      });
+  
+      if (response) {
+        router.push('/(auth)/verification');
+      }
+    } catch (e) {
       setError(e.message);
     }
-  }
+  };
   return (
     <KeyboardAwareScrollView
       style = {styles.container}
@@ -37,11 +42,16 @@ const SignIn = () => {
               style={styles.logo}
               resizeMode="contain"
           />
-      <Text style = {styles.title}>Sign In</Text>
+      <Text style = {styles.title}>Create an Account</Text>
         <TextInput 
         value={email}
         onChangeText={setEmail}
         placeholder="Email" 
+        style={styles.input}/>
+        <TextInput 
+        value={phone_number}
+        onChangeText={setPhoneNumber}
+        placeholder="Phone Number" 
         style={styles.input}/>
         <TextInput 
         value={password}
@@ -50,11 +60,13 @@ const SignIn = () => {
         style={styles.input}
         secureTextEntry
         />
-        <CustomButton title="Sign In" style={styles.signInButton} 
-        onPress={onSignInPressed}
-        //onPress={() => router.push('/home')}
+        <CustomButton title="Sign Up" style={styles.signUpButton} 
+        onPress={onSignUpPressed}
         />
         {error && <Text style={{color: 'red'}}>{error}</Text>}
+        <CustomButton title="test" style={styles.signUpButton} 
+        onPress={test}
+        />
         </ScrollView>
     </KeyboardAwareScrollView>
   )
@@ -91,10 +103,11 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginBottom: 0,
   },
-  signInButton: {
+  signUpButton: {
     marginTop: 10,
-    width: 350
+    width: 350,
+    flex: 1
   }
 })
 
-export default SignIn;
+export default SignUp;

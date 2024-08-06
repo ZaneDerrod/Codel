@@ -26,7 +26,7 @@ export default function HomeScreen() {
             <CustomButton 
             title="Continue With Email"
             style={styles.signUpButton} 
-            onPress={() => router.push('/pages/protected')}
+            onPress={() => router.push('/pages/(auth)/sign-up')}
             />
             <CustomButton 
             title="Sign In with Google"  
@@ -34,6 +34,11 @@ export default function HomeScreen() {
             textStyle={styles.customButtonTextStyle}  
             onPress={() => signInWithRedirect({ provider: "Google" })}
             />
+            
+            <Text style={styles.loginQuestion}>Already have a account? </Text>
+            <TouchableOpacity onPress={() => router.push('/pages/(auth)/sign-in')}>
+              <Text style={styles.login}>Login</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
