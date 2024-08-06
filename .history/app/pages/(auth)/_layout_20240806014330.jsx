@@ -11,7 +11,7 @@ function ProtectedLayout() {
 const customTheme = StyleSheet.create({
   container: {
     backgroundColor: '#f5f5f5', // Background color for the Authenticator
-    padding: 20,
+    padding: 10,
   },
   sectionHeader: {
     backgroundColor: '#3b5998', // Header color

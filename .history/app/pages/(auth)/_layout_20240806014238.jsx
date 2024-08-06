@@ -56,7 +56,6 @@ export default withAuthenticator(ProtectedLayout, {
     },
   },
   theme: {
-    ...AmplifyTheme,
     ...customTheme
   },
 });

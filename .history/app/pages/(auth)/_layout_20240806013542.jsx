@@ -1,7 +1,8 @@
 import React from 'react';
-import {  AmplifyTheme, withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
+import { withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 import { Slot } from 'expo-router';
 import { StyleSheet } from 'react-native';
+import { AmplifyTheme } from 'aws-amplify-react-native';
 
 function ProtectedLayout() {
   return <Slot />;
@@ -41,23 +42,11 @@ const customTheme = StyleSheet.create({
 
 export default withAuthenticator(ProtectedLayout, {
   signUpConfig: {
-    hiddenDefaults: [], // Show all default fields, including phone number
-  },
-  formFields: {
-    signUp: {
-      phone_number: {
-        order: 3, // Set the display order
-      },
-    },
-    signIn: {
-      phone_number: {
-        order: 1,
-      },
-    },
+    hiddenDefaults: ['phone_number'], // Example of hiding phone number field
   },
   theme: {
-    ...AmplifyTheme,
-    ...customTheme
+    ...AmplifyTheme, // Spread existing theme
+    ...customTheme, // Apply custom styles
   },
 });
 /*

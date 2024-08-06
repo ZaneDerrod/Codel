@@ -1,5 +1,5 @@
 import React from 'react';
-import {  AmplifyTheme, withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
+import { withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react-native';
 import { Slot } from 'expo-router';
 import { StyleSheet } from 'react-native';
 
@@ -56,7 +56,6 @@ export default withAuthenticator(ProtectedLayout, {
     },
   },
   theme: {
-    ...AmplifyTheme,
     ...customTheme
   },
 });

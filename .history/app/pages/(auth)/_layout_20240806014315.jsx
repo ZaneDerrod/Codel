@@ -10,7 +10,7 @@ function ProtectedLayout() {
 // Customize the Amplify Authenticator styles
 const customTheme = StyleSheet.create({
   container: {
-    backgroundColor: '#f5f5f5', // Background color for the Authenticator
+    backgroundColor: '#00000', // Background color for the Authenticator
     padding: 20,
   },
   sectionHeader: {

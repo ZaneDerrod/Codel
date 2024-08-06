@@ -32,7 +32,7 @@ export default function HomeScreen() {
             title="Sign In with Google"  
             style={styles.customButtonGoogleStyle}
             textStyle={styles.customButtonTextStyle}  
-            onPress={() => signInWithRedirect({ provider: "Google" })}
+            onPress={signInWithRedirect({ provider: "Google" })}
             />
             
             <Text style={styles.loginQuestion}>Already have a account? </Text>
